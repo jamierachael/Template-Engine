@@ -1,33 +1,39 @@
-// Developer-Profile-Generator
-// Homework-8 Jamie Morris
+// Team-Generator
+// Homework-9 Jamie Morris
 // Entry Point script
 // Start JS
 // Declare requiements with variables
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-// var pdf = require('html-pdf');
 const generate = require('./generateHTML');
 const axios = require("axios");
-// const open = require('open');
+
+// Require Class Files 
+// const Employee = require("./lib/Employee");
+// const Engineer = require("./lib/Engineer");
+// const Manager = require("./lib/Manager");
+// const Intern = require("./lib/Intern");
+
 
 // This will write the file, and modify it to a promise
 const writeFileAsync = util.promisify(fs.writeFile);
 
-
-// Prompts user for username and favorite color
+// Array would go here
+// const Employee = ["Manager", "Engineer", "Intern"];
+// Prompts user for employee info
 function promptUser() {
     return inquirer.prompt([
         {
             type: "input",
             name: "name",
-            message: "What is your GitHub name?"
+            message: "What is your name?"
         },
-        // {
-        //     type: "input",
-        //     name: "username",
-        //     message: "What is your GitHub username?"
-        // },
+        {
+            type: "input",
+            name: "username",
+            message: "What is your GitHub username?"
+        },
         {
             type: "input",
             name: "email",
@@ -41,7 +47,7 @@ function promptUser() {
         {
             type: "rawlist",
             name: "title",
-            choices: ["Employee", "Manager", "Engineer",
+            choices: ["Manager", "Engineer",
                 "Intern"],
             message: "What is your role in your company?"
         }
@@ -49,6 +55,9 @@ function promptUser() {
     ]);
 }
 
+// Function call generate HTML
+// For loop with If for roles 
+// Then input team members function
 
 // Turns user prompt into answers to pull data
 let userAnswers = {};
@@ -72,35 +81,15 @@ promptUser()
         const html = generate(userAnswers, response);
         // Writes data into an HTML doc
         // Will be updated to team.html in the output folder
-        return writeFileAsync("index.html", html);
+        return writeFileAsync("./output/team.html", html);
 
     })
     .then(function () {
-        console.log("Successfully wrote to index.html");
-        // Reads the file before PDF conversion
-        // Will be updated to team.html in the output folder
-        var htmlPDF = fs.readFileSync('./index.html', 'utf8');
-        var options = { format: 'Letter' };
-        // Pass in HTML file to function to create PDF 
-        // Creates PDF 
-        // return new Promise((resolve, reject) => {
-        //     pdf.create(htmlPDF, options).toFile('./index.pdf', function (err, res) {
-        //         // console.log(res);
-        //         // Error testing 
-        //         if (err) return reject(err);
-        //         return resolve(res);
+        console.log("Successfully wrote to team.html");
 
-        //     })
-        // })
 
     })
-    // Opens the PDF 
-    // .then(function (res) {
-    //     console.log("This works!", res);
 
-    //     open('index.pdf');
-    // console.log('The image viewer app quit');
-    // })
     // Error testing 
     .catch(function (err) {
         console.log(err);
