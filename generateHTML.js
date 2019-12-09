@@ -1,38 +1,9 @@
-// Developer-Profile-Generator
-// Homework-8 Jamie Morris
-// Most of the code provided from UNH
-// Module script
-// Color Options that coordinate with user answers
-// const colors = {
-//     green: {
-//         wrapperBackground: "#E6E1C3",
-//         headerBackground: "#C1C72C",
-//         headerColor: "black",
-//         photoBorderColor: "#000000"
-//     },
-//     blue: {
-//         wrapperBackground: "#5F64D3",
-//         headerBackground: "#26175A",
-//         headerColor: "white",
-//         photoBorderColor: "#73448C"
-//     },
-//     pink: {
-//         wrapperBackground: "#879CDF",
-//         headerBackground: "#FF8374",
-//         headerColor: "white",
-//         photoBorderColor: "#FEE24C"
-//     },
-//     red: {
-//         wrapperBackground: "#DE9967",
-//         headerBackground: "#870603",
-//         headerColor: "white",
-//         photoBorderColor: "#ffffff"
-//     }
-// };
-
+// Team-Generator
+// Homework-9 Jamie Morris
 // Generates an HTML file using User Answers
 // Pulls user data from GitHub
 // Uses a Template Literal that also includes style tags and inline Bootstrap styling 
+// This doc is used for testing purposes, this data was supposed to be movied to Employee.js
 function generateHTML(data, response) {
     return `<!doctype html>
     <html lang="en">
@@ -91,7 +62,7 @@ function generateHTML(data, response) {
                             </div>
                             <!-- <div class="bg-secondary m-4"> -->
                             <ul class="list-group list-group-flush border mt-4 mb-4">
-                                <li class="list-group-item">ID: 1</li>
+                                <li class="list-group-item">${response.data.id}</li>
                                 <li class="list-group-item">${response.data.email}</li>
                                 <li class="list-group-item">Office Number: 1</li>
                             </ul>
@@ -103,13 +74,13 @@ function generateHTML(data, response) {
                     <div class="col-4">
                         <div class="border shadow p-3 mb-5 rounded bg-light" style="width: 18rem;">
                             <div class="card-header bg-primary text-white">
-                                <h2 class="font-weight-normal">Name</h2>
+                            <h2 class="font-weight-normal">${response.data.name}</h2>
                                 <h3 class="font-weight-normal">Engineer</h3>
                             </div>
                             <!-- <div class="bg-secondary m-4"> -->
                             <ul class="list-group list-group-flush border mt-4 mb-4">
-                                <li class="list-group-item">ID: 1</li>
-                                <li class="list-group-item">Email: Jamie.rachael@gmail.com</li>
+                            <li class="list-group-item">${response.data.id}</li>
+                            <li class="list-group-item">${response.data.email}</li>
                                 <li class="list-group-item">Office Number: 1</li>
                             </ul>
                         </div>
@@ -119,13 +90,13 @@ function generateHTML(data, response) {
                     <div class="col-4">
                         <div class="border shadow p-3 mb-5 rounded bg-light" style="width: 18rem;">
                             <div class="card-header bg-primary text-white">
-                                <h2 class="font-weight-normal">Name</h2>
+                            <h2 class="font-weight-normal">${response.data.name}</h2>
                                 <h3 class="font-weight-normal">Intern</h3>
                             </div>
                             <!-- <div class="bg-secondary m-4"> -->
                             <ul class="list-group list-group-flush border mt-4 mb-4">
-                                <li class="list-group-item">ID: 1</li>
-                                <li class="list-group-item">Email: Jamie.rachael@gmail.com</li>
+                            <li class="list-group-item">${response.data.id}</li>
+                            <li class="list-group-item">${response.data.email}</li>
                                 <li class="list-group-item">Office Number: 1</li>
                             </ul>
                         </div>
@@ -136,13 +107,13 @@ function generateHTML(data, response) {
                         <div class="col-4 offset-3">
                             <div class="border shadow p-3 mb-5 rounded bg-light" style="width: 18rem;">
                                 <div class="card-header bg-primary text-white">
-                                    <h2 class="font-weight-normal">Name</h2>
+                                <h2 class="font-weight-normal">${response.data.name}</h2>
                                     <h3 class="font-weight-normal">Manager</h3>
                                 </div>
                                 <!-- <div class="bg-secondary m-4"> -->
                                 <ul class="list-group list-group-flush border mt-4 mb-4">
-                                    <li class="list-group-item">ID: 1</li>
-                                    <li class="list-group-item">Email: Jamie.rachael@gmail.com</li>
+                                <li class="list-group-item">${response.data.id}</li>
+                                <li class="list-group-item">${response.data.email}</li>
                                     <li class="list-group-item">Office Number: 1</li>
                                 </ul>
                             </div>
@@ -153,13 +124,13 @@ function generateHTML(data, response) {
                     <div class="col-4 offset-1">
                         <div class="border shadow p-3 mb-5 rounded bg-light" style="width: 18rem;">
                             <div class="card-header bg-primary text-white">
-                                <h2 class="font-weight-normal">Name</h2>
+                            <h2 class="font-weight-normal">${response.data.name}</h2>
                                 <h3 class="font-weight-normal">Engineer</h3>
                             </div>
                             <!-- <div class="bg-secondary m-4"> -->
                             <ul class="list-group list-group-flush border mt-4 mb-4">
-                                <li class="list-group-item">ID: 1</li>
-                                <li class="list-group-item">Email: Jamie.rachael@gmail.com</li>
+                            <li class="list-group-item">${response.data.id}</li>
+                            <li class="list-group-item">${response.data.email}</li>
                                 <li class="list-group-item">Office Number: 1</li>
                             </ul>
                         </div>
@@ -173,13 +144,13 @@ function generateHTML(data, response) {
                     <div class="col-4">
                         <div class="border shadow p-3 mb-5 rounded bg-light" style="width: 18rem;">
                             <div class="card-header bg-primary text-white">
-                                <h2 class="font-weight-normal">Name</h2>
+                            <h2 class="font-weight-normal">${response.data.name}</h2>
                                 <h3 class="font-weight-normal">Manager</h3>
                             </div>
                             <!-- <div class="bg-secondary m-4"> -->
                             <ul class="list-group list-group-flush border mt-4 mb-4">
-                                <li class="list-group-item">ID: 1</li>
-                                <li class="list-group-item">Email: Jamie.rachael@gmail.com</li>
+                            <li class="list-group-item">${response.data.id}</li>
+                            <li class="list-group-item">${response.data.email}</li>
                                 <li class="list-group-item">Office Number: 1</li>
                             </ul>
                             <!-- </div> -->
@@ -190,13 +161,13 @@ function generateHTML(data, response) {
                     <div class="col-4">
                         <div class="border shadow p-3 mb-5 rounded bg-light" style="width: 18rem;">
                             <div class="card-header bg-primary text-white">
-                                <h2 class="font-weight-normal">Name</h2>
+                            <h2 class="font-weight-normal">${response.data.name}</h2>
                                 <h3 class="font-weight-normal">Engineer</h3>
                             </div>
                             <!-- <div class="bg-secondary m-4"> -->
                             <ul class="list-group list-group-flush border mt-4 mb-4">
-                                <li class="list-group-item">ID: 1</li>
-                                <li class="list-group-item">Email: Jamie.rachael@gmail.com</li>
+                            <li class="list-group-item">${response.data.id}</li>
+                            <li class="list-group-item">${response.data.email}</li>
                                 <li class="list-group-item">Office Number: 1</li>
                             </ul>
                             <!-- </div> -->
@@ -207,13 +178,13 @@ function generateHTML(data, response) {
                     <div class="col-4">
                         <div class="border shadow p-3 mb-5 rounded bg-light" style="width: 18rem;">
                             <div class="card-header bg-primary text-white">
-                                <h2 class="font-weight-normal">Name</h2>
+                            <h2 class="font-weight-normal">${response.data.name}</h2>
                                 <h3 class="font-weight-normal">Intern</h3>
                             </div>
                             <!-- <div class="bg-secondary m-4"> -->
                             <ul class="list-group list-group-flush border mt-4 mb-4">
-                                <li class="list-group-item">ID: 1</li>
-                                <li class="list-group-item">Email: Jamie.rachael@gmail.com</li>
+                            <li class="list-group-item">${response.data.id}</li>
+                            <li class="list-group-item">${response.data.email}</li>
                                 <li class="list-group-item">Office Number: 1</li>
                             </ul>
                             <!-- </div> -->
@@ -225,31 +196,31 @@ function generateHTML(data, response) {
                         <div class="col-4 offset-3">
                             <div class="border shadow p-3 mb-5 rounded bg-light" style="width: 18rem;">
                                 <div class="card-header bg-primary text-white">
-                                    <h2 class="font-weight-normal">Name</h2>
+                                <h2 class="font-weight-normal">${response.data.name}</h2>
                                     <h3 class="font-weight-normal">Manager</h3>
                                 </div>
                                 <!-- <div class="bg-secondary m-4"> -->
                                 <ul class="list-group list-group-flush border mt-4 mb-4">
-                                    <li class="list-group-item">ID: 1</li>
-                                    <li class="list-group-item">Email: Jamie.rachael@gmail.com</li>
+                                <li class="list-group-item">${response.data.id}</li>
+                                <li class="list-group-item">${response.data.email}</li>
                                     <li class="list-group-item">Office Number: 1</li>
                                 </ul>
                                 <!-- </div> -->
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Start Sub Card Layout 2 -->
                     <div class="col-4 offset-1">
                         <div class="border shadow p-3 mb-5 rounded bg-light" style="width: 18rem;">
                             <div class="card-header bg-primary text-white">
-                                <h2 class="font-weight-normal">Name</h2>
+                            <h2 class="font-weight-normal">${response.data.name}</h2>
                                 <h3 class="font-weight-normal">Engineer</h3>
                             </div>
                             <!-- <div class="bg-secondary m-4"> -->
                             <ul class="list-group list-group-flush border mt-4 mb-4">
-                                <li class="list-group-item">ID: 1</li>
-                                <li class="list-group-item">Email: Jamie.rachael@gmail.com</li>
+                            <li class="list-group-item">${response.data.id}</li>
+                            <li class="list-group-item">${response.data.email}</li>
                                 <li class="list-group-item">Office Number: 1</li>
                             </ul>
                         </div>

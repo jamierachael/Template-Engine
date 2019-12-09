@@ -1,3 +1,6 @@
+// Team-Generator
+// Homework-9 Jamie Morris
+// Test provided by UNH
 const Engineer = require("../lib/Engineer");
 
 test("Can set GitHUb account via constructor", () => {

@@ -1,3 +1,6 @@
+// Team-Generator
+// Homework-9 Jamie Morris
+// Test provided by UNH
 const Intern = require("../lib/Intern");
 
 test("Can set school via constructor", () => {

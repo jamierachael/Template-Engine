@@ -1,3 +1,6 @@
+// Team-Generator
+// Homework-9 Jamie Morris
+// Test provided by UNH
 const Employee = require("../lib/Employee");
 
 test("Can instantiate Employee instance", () => {

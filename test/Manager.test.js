@@ -1,3 +1,6 @@
+// Team-Generator
+// Homework-9 Jamie Morris
+// Test provided by UNH
 const Manager = require("../lib/Manager");
 const Employee = require("../lib/Employee");
 
